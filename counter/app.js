@@ -11,15 +11,11 @@ btns.forEach(function(btn) {
         if (styles.contains('decrease')){
             count--;
         }
-        value.textContent = count;
-
-        if (styles.contains('reset')){
-            count = 0
-        }
-        value.textContent = count
-
-        if (styles.contains('increase')){
+        else if (styles.contains('increase')){
             count++
+        }
+        else {
+            count = 0
         }
         value.textContent = count
     })
