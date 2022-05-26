@@ -223,18 +223,18 @@ Questions
 .question-btn:hover {
   transform: rotate(90deg);
 }
-.question-text {
+.question-txt {
   padding: 1rem 0 1.5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
-.question-text p {
+.question-txt p {
   margin-bottom: 0;
 }
 /* hide text */
-/* .question-text {
+.question-txt {
   display: none;
 }
-.show-text .question-text {
+.show-text .question-txt {
   display: block;
 }
 .minus-icon {
@@ -245,4 +245,4 @@ Questions
 }
 .show-text .plus-icon {
   display: none;
-} */
+}
