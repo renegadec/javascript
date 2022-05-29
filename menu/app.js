@@ -80,6 +80,23 @@ window.addEventListener('DOMContentLoaded', function(){
   displayMenuItems(menu)
 })
 
+filterBtns.forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    const category = e.currentTarget.dataset.id
+const menuCategory = menu.filter(function(menuItem){
+  if (menuItem.category === category){
+    return menuItem
+  }
+})
+if (category === 'all'){
+  displayMenuItems(menu)
+}
+else{
+  displayMenuItems(menuCategory)
+}
+  })
+})
+
 function displayMenuItems(menuItems){
   let displayMenu = menuItems.map(function(item){
 
@@ -95,8 +112,8 @@ function displayMenuItems(menuItems){
                   ${item.desc}
                 </p>
               </div>
-            </article>`;
+            </article>`
   })
-  displayMenu = displayMenu.join("");
-  sectionCenter.innerHTML = displayMenu;
+  displayMenu = displayMenu.join("")
+  sectionCenter.innerHTML = displayMenu
 }
